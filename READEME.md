@@ -215,13 +215,9 @@ paper2code/
 - **Tests**: `python -m main --test`
 - **Stats**: `python -m main --stats`
 
-## License
-
-MIT License
-
 ## Changelog
 
-### v2.0.0 (Production Release)
+### v.0.0 
 - ✅ Comprehensive error handling
 - ✅ Advanced monitoring and metrics
 - ✅ Rate limiting and caching
