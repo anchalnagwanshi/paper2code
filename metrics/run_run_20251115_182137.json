@@ -1,0 +1,20 @@
+{
+  "run_id": "run_20251115_182137",
+  "paper_path": "tests\\papers\\example_paper.txt",
+  "start_time": 1763211097.8852873,
+  "end_time": 1763211205.4954822,
+  "status": "success",
+  "researcher_duration": 17.677271366119385,
+  "coder_duration": 23.169299840927124,
+  "qa_duration": 64.20786929130554,
+  "total_duration": 107.61019492149353,
+  "retries": 0,
+  "failed_stages": [],
+  "code_length": 2276,
+  "code_valid": true,
+  "llm_calls": 2,
+  "llm_tokens": 211,
+  "llm_cost": 0.0,
+  "error_type": null,
+  "error_message": null
+}

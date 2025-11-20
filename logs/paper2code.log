@@ -1,0 +1,911 @@
+2025-11-15 12:07:19 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 12:07:19 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 12:07:19 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 12:07:19 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 12:07:19 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 12:07:19 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 12:07:19 | INFO     | test_suite           | setUpClass           | Test directory: C:\Users\ancha\AppData\Local\Temp\tmpckvb67jw
+2025-11-15 12:07:19 | INFO     | cache                | clear                | Cache cleared
+2025-11-15 12:07:19 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:07:19 | INFO     | nodes                | coder_node           | CODER NODE
+2025-11-15 12:07:19 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:07:19 | INFO     | nodes                | __enter__            | Starting: coder
+2025-11-15 12:07:19 | INFO     | nodes                | coder_node           | Generating code...
+2025-11-15 12:07:33 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:07:49 | WARNING  | nodes                | _generate_code_with_fallback | LLM code has syntax error: invalid syntax (<generated>, line 1), using template
+2025-11-15 12:07:49 | INFO     | nodes                | coder_node           | Code generated: 2256 characters
+2025-11-15 12:07:49 | INFO     | nodes                | __exit__             | Completed: coder (duration: 29.56s)
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:49 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:07:49 | ERROR    | nodes                | researcher_node      | File not found: Paper file not found: /nonexistent/paper.txt
+2025-11-15 12:07:49 | ERROR    | errors               | log_error            | {"category": "file_not_found", "severity": "error", "error_type": "FileNotFoundError", "error_message": "Paper file not found: /nonexistent/paper.txt", "context": {"operation": "researcher", "paper_path": "/nonexistent/paper.txt"}, "traceback": "Traceback (most recent call last):\n  File \"C:\\paper2code\\nodes.py\", line 73, in researcher_node\n    raise FileNotFoundError(f\"Paper file not found: {paper_path}\")\nFileNotFoundError: Paper file not found: /nonexistent/paper.txt\n", "timestamp": "2025-11-15T06:37:49.423151", "occurrence_count": 1}
+2025-11-15 12:07:49 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 0.00s)
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:49 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmpckvb67jw\papers\simple_paper.txt
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | Paper loaded: 499 characters
+2025-11-15 12:07:49 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 499, "tags": {}, "timestamp": "2025-11-15T06:37:49.484454"}
+2025-11-15 12:07:49 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 12:07:51 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "ResNet-50",
+  "dataset": "CIFAR-10",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "loss_function": "Cross-Entropy",
+  "gpu_required": true
+}
+2025-11-15 12:07:55 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmpckvb67jw\\papers\\simple_paper.txt", "duration": 6.250730752944946, "paper_length": 499}, "timestamp": "2025-11-15T06:37:55.677496"}
+2025-11-15 12:07:55 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 6.25s)
+2025-11-15 12:07:55 | ERROR    | graph                | decide_after_qa      | Router: Max retries (3) exceeded. Halting.
+2025-11-15 12:07:55 | INFO     | monitoring           | start_run            | Started tracking run: test_run
+2025-11-15 12:07:55 | INFO     | monitoring           | end_run              | Run test_run completed: success (duration: 0.00s)
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:55 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmpckvb67jw\papers\minimal_paper.txt
+2025-11-15 12:07:55 | ERROR    | nodes                | _load_paper_with_validation | Failed to load paper: Paper content too short or empty
+2025-11-15 12:07:55 | ERROR    | nodes                | researcher_node      | Researcher error: Paper content too short or empty
+Traceback (most recent call last):
+  File "C:\paper2code\nodes.py", line 78, in researcher_node
+    paper_text = _load_paper_with_validation(paper_path)
+  File "C:\paper2code\nodes.py", line 141, in _load_paper_with_validation
+    raise ValueError("Paper content too short or empty")
+ValueError: Paper content too short or empty
+2025-11-15 12:07:55 | ERROR    | errors               | log_error            | {"category": "researcher_error", "severity": "critical", "error_type": "ValueError", "error_message": "Paper content too short or empty", "context": {"operation": "researcher", "paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmpckvb67jw\\papers\\minimal_paper.txt"}, "traceback": "Traceback (most recent call last):\n  File \"C:\\paper2code\\nodes.py\", line 78, in researcher_node\n    paper_text = _load_paper_with_validation(paper_path)\n  File \"C:\\paper2code\\nodes.py\", line 141, in _load_paper_with_validation\n    raise ValueError(\"Paper content too short or empty\")\nValueError: Paper content too short or empty\n", "timestamp": "2025-11-15T06:37:55.719256", "occurrence_count": 1}
+2025-11-15 12:07:55 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 0.04s)
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:07:55 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmpckvb67jw\papers\medium_paper.txt
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | Paper loaded: 655 characters
+2025-11-15 12:07:55 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 655, "tags": {}, "timestamp": "2025-11-15T06:37:55.746494"}
+2025-11-15 12:07:55 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 12:07:58 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:08:02 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 12:08:02 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT-base transformer",
+  "dataset": "IMDB sentiment dataset from HuggingFace",
+  "optimizer": "AdamW",
+  "learning_rate": 2e-05,
+  "batch_size": 16,
+  "loss_function": "Binary Cross-Entropy",
+  "gpu_required": true
+}
+2025-11-15 12:08:02 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmpckvb67jw\\papers\\medium_paper.txt", "duration": 6.8824074268341064, "paper_length": 655}, "timestamp": "2025-11-15T06:38:02.607398"}
+2025-11-15 12:08:02 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 6.88s)
+2025-11-15 12:08:02 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:08:02 | INFO     | nodes                | coder_node           | CODER NODE
+2025-11-15 12:08:02 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:08:02 | INFO     | nodes                | __enter__            | Starting: coder
+2025-11-15 12:08:02 | WARNING  | nodes                | coder_node           | Retry attempt 1/3
+2025-11-15 12:08:02 | INFO     | nodes                | coder_node           | Generating code...
+2025-11-15 12:08:05 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:08:21 | WARNING  | nodes                | _generate_code_with_fallback | LLM code has syntax error: invalid syntax (<generated>, line 1), using template
+2025-11-15 12:08:21 | INFO     | nodes                | coder_node           | Code generated: 2251 characters
+2025-11-15 12:08:21 | INFO     | nodes                | __exit__             | Completed: coder (duration: 18.66s)
+2025-11-15 12:08:21 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:08:21 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:08:21 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:08:21 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:08:21 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmpjz2bt0yf\integration_paper.txt
+2025-11-15 12:08:21 | INFO     | nodes                | researcher_node      | Paper loaded: 273 characters
+2025-11-15 12:08:21 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 273, "tags": {}, "timestamp": "2025-11-15T06:38:21.295186"}
+2025-11-15 12:08:21 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 12:08:23 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:08:27 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 12:08:27 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "Multi-layer perceptron",
+  "dataset": "Random data",
+  "optimizer": "SGD",
+  "learning_rate": 0.01,
+  "batch_size": 16,
+  "loss_function": "MSE",
+  "gpu_required": false
+}
+2025-11-15 12:08:27 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmpjz2bt0yf\\integration_paper.txt", "duration": 6.259007453918457, "paper_length": 273}, "timestamp": "2025-11-15T06:38:27.536287"}
+2025-11-15 12:08:27 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 6.26s)
+2025-11-15 12:08:27 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 12:08:27 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 12:08:27 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 12:08:27 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 12:08:27 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 12:08:27 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 12:57:36 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 12:57:36 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 12:57:36 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 12:57:36 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 12:57:36 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 12:57:36 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 12:57:36 | INFO     | test_suite           | setUpClass           | Test directory: C:\Users\ancha\AppData\Local\Temp\tmp2_5hbd2q
+2025-11-15 12:57:36 | INFO     | cache                | clear                | Cache cleared
+2025-11-15 12:57:36 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:57:36 | INFO     | nodes                | coder_node           | CODER NODE
+2025-11-15 12:57:36 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:57:36 | INFO     | nodes                | __enter__            | Starting: coder
+2025-11-15 12:57:36 | INFO     | nodes                | coder_node           | Generating code...
+2025-11-15 12:57:37 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:57:48 | WARNING  | nodes                | _generate_code_with_fallback | LLM code has syntax error: invalid syntax (<generated>, line 1), using template
+2025-11-15 12:57:48 | INFO     | nodes                | coder_node           | Code generated: 2256 characters
+2025-11-15 12:57:48 | INFO     | nodes                | __exit__             | Completed: coder (duration: 11.90s)
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:48 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:57:48 | ERROR    | nodes                | researcher_node      | File not found: Paper file not found: /nonexistent/paper.txt
+2025-11-15 12:57:48 | ERROR    | errors               | log_error            | {"category": "file_not_found", "severity": "error", "error_type": "FileNotFoundError", "error_message": "Paper file not found: /nonexistent/paper.txt", "context": {"operation": "researcher", "paper_path": "/nonexistent/paper.txt"}, "traceback": "Traceback (most recent call last):\n  File \"C:\\paper2code\\nodes.py\", line 73, in researcher_node\n    raise FileNotFoundError(f\"Paper file not found: {paper_path}\")\nFileNotFoundError: Paper file not found: /nonexistent/paper.txt\n", "timestamp": "2025-11-15T07:27:48.055965", "occurrence_count": 1}
+2025-11-15 12:57:48 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 0.00s)
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:48 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmp2_5hbd2q\papers\simple_paper.txt
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | Paper loaded: 499 characters
+2025-11-15 12:57:48 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 499, "tags": {}, "timestamp": "2025-11-15T07:27:48.062118"}
+2025-11-15 12:57:48 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 12:57:49 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "ResNet-50",
+  "dataset": "CIFAR-10",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "loss_function": "Cross-Entropy",
+  "gpu_required": true
+}
+2025-11-15 12:57:52 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmp2_5hbd2q\\papers\\simple_paper.txt", "duration": 4.375901699066162, "paper_length": 499}, "timestamp": "2025-11-15T07:27:52.434468"}
+2025-11-15 12:57:52 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 4.38s)
+2025-11-15 12:57:52 | ERROR    | graph                | decide_after_qa      | Router: Max retries (3) exceeded. Halting.
+2025-11-15 12:57:52 | INFO     | monitoring           | start_run            | Started tracking run: test_run
+2025-11-15 12:57:52 | INFO     | monitoring           | end_run              | Run test_run completed: success (duration: 0.00s)
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:52 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmp2_5hbd2q\papers\minimal_paper.txt
+2025-11-15 12:57:52 | ERROR    | nodes                | _load_paper_with_validation | Failed to load paper: Paper content too short or empty
+2025-11-15 12:57:52 | ERROR    | nodes                | researcher_node      | Researcher error: Paper content too short or empty
+Traceback (most recent call last):
+  File "C:\paper2code\nodes.py", line 78, in researcher_node
+    paper_text = _load_paper_with_validation(paper_path)
+  File "C:\paper2code\nodes.py", line 141, in _load_paper_with_validation
+    raise ValueError("Paper content too short or empty")
+ValueError: Paper content too short or empty
+2025-11-15 12:57:52 | ERROR    | errors               | log_error            | {"category": "researcher_error", "severity": "critical", "error_type": "ValueError", "error_message": "Paper content too short or empty", "context": {"operation": "researcher", "paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmp2_5hbd2q\\papers\\minimal_paper.txt"}, "traceback": "Traceback (most recent call last):\n  File \"C:\\paper2code\\nodes.py\", line 78, in researcher_node\n    paper_text = _load_paper_with_validation(paper_path)\n  File \"C:\\paper2code\\nodes.py\", line 141, in _load_paper_with_validation\n    raise ValueError(\"Paper content too short or empty\")\nValueError: Paper content too short or empty\n", "timestamp": "2025-11-15T07:27:52.441935", "occurrence_count": 1}
+2025-11-15 12:57:52 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 0.00s)
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:57:52 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmp2_5hbd2q\papers\medium_paper.txt
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | Paper loaded: 655 characters
+2025-11-15 12:57:52 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 655, "tags": {}, "timestamp": "2025-11-15T07:27:52.446392"}
+2025-11-15 12:57:52 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 12:57:54 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:57:56 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 12:57:56 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT-base transformer",
+  "dataset": "IMDB sentiment dataset from HuggingFace",
+  "optimizer": "AdamW",
+  "learning_rate": 2e-05,
+  "batch_size": 16,
+  "loss_function": "Binary Cross-Entropy",
+  "gpu_required": true
+}
+2025-11-15 12:57:56 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmp2_5hbd2q\\papers\\medium_paper.txt", "duration": 4.527664661407471, "paper_length": 655}, "timestamp": "2025-11-15T07:27:56.971977"}
+2025-11-15 12:57:56 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 4.53s)
+2025-11-15 12:57:56 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:57:56 | INFO     | nodes                | coder_node           | CODER NODE
+2025-11-15 12:57:56 | INFO     | nodes                | coder_node           | ================================================================================
+2025-11-15 12:57:56 | INFO     | nodes                | __enter__            | Starting: coder
+2025-11-15 12:57:56 | WARNING  | nodes                | coder_node           | Retry attempt 1/3
+2025-11-15 12:57:56 | INFO     | nodes                | coder_node           | Generating code...
+2025-11-15 12:57:58 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:58:10 | WARNING  | nodes                | _generate_code_with_fallback | LLM code has syntax error: invalid syntax (<generated>, line 1), using template
+2025-11-15 12:58:10 | INFO     | nodes                | coder_node           | Code generated: 2251 characters
+2025-11-15 12:58:10 | INFO     | nodes                | __exit__             | Completed: coder (duration: 13.49s)
+2025-11-15 12:58:10 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:58:10 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 12:58:10 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 12:58:10 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 12:58:10 | INFO     | nodes                | researcher_node      | Loading paper: C:\Users\ancha\AppData\Local\Temp\tmp9i1f79n0\integration_paper.txt
+2025-11-15 12:58:10 | INFO     | nodes                | researcher_node      | Paper loaded: 273 characters
+2025-11-15 12:58:10 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 273, "tags": {}, "timestamp": "2025-11-15T07:28:10.469941"}
+2025-11-15 12:58:10 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 12:58:12 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 12:58:14 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 12:58:14 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "Multi-layer perceptron",
+  "dataset": "Random data",
+  "optimizer": "SGD",
+  "learning_rate": 0.01,
+  "batch_size": 16,
+  "loss_function": "MSE",
+  "gpu_required": false
+}
+2025-11-15 12:58:14 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "C:\\Users\\ancha\\AppData\\Local\\Temp\\tmp9i1f79n0\\integration_paper.txt", "duration": 4.493855237960815, "paper_length": 273}, "timestamp": "2025-11-15T07:28:14.960172"}
+2025-11-15 12:58:14 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 4.49s)
+2025-11-15 12:58:14 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 12:58:14 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 12:58:14 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 12:58:14 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 12:58:14 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 12:58:14 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 18:21:37 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:21:37 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 18:21:37 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 18:21:37 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 18:21:37 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 18:21:37 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | Paper: tests\papers\example_paper.txt
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T18:21:37.884853
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:21:37 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_182137
+2025-11-15 18:21:37 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 18:21:37 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 18:21:37 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 18:21:37 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 18:21:37 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 18:21:37 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\example_paper.txt
+2025-11-15 18:21:37 | INFO     | nodes                | researcher_node      | Paper loaded: 664 characters
+2025-11-15 18:21:37 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 664, "tags": {}, "timestamp": "2025-11-15T12:51:37.919316"}
+2025-11-15 18:21:37 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 18:21:49 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 18:21:55 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 18:21:55 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "ResNet-50",
+  "dataset": "CIFAR-10",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "loss_function": "Cross-Entropy Loss",
+  "gpu_required": false
+}
+2025-11-15 18:21:55 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\example_paper.txt", "duration": 17.677271366119385, "paper_length": 664}, "timestamp": "2025-11-15T12:51:55.592857"}
+2025-11-15 18:21:55 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 17.68s)
+2025-11-15 18:21:55 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 18:21:55 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 18:21:55 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 18:21:55 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 18:21:55 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 18:21:55 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 18:49:09 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:49:09 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 18:49:09 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 18:49:09 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 18:49:09 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 18:49:09 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:49:09 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:49:09 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 18:49:09 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:49:09 | INFO     | __main__             | run                  | Paper: papers\1810.04805v2.pdf
+2025-11-15 18:49:09 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T18:49:09.831178
+2025-11-15 18:49:09 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 18:49:09 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:49:09 | ERROR    | __main__             | run                  | Paper not found: papers\1810.04805v2.pdf
+2025-11-15 18:50:19 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:50:19 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 18:50:19 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 18:50:19 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 18:50:19 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 18:50:19 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T18:50:19.959736
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:50:19 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_185019
+2025-11-15 18:50:19 | INFO     | __main__             | run                  | DRY RUN MODE - Validation only
+2025-11-15 18:50:19 | INFO     | __main__             | _dry_run             | Validating paper...
+2025-11-15 18:50:19 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 18:50:19 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 18:50:19 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 18:50:19 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 18:50:19 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 18:50:20 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 18:50:20 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T13:20:20.777406"}
+2025-11-15 18:50:20 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 18:50:34 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 18:50:43 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 18:50:43 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Fine-tune, Feature-based approach performs best with MASK strategy for MLM pre-training and R ND strategy when using feature-based approach to NER.",
+  "learning_rate": 0.15,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 18:50:43 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 23.824952840805054, "paper_length": 64138}, "timestamp": "2025-11-15T13:20:43.790323"}
+2025-11-15 18:50:43 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 23.83s)
+2025-11-15 18:50:43 | INFO     | __main__             | _dry_run             | ✅ Validation passed
+2025-11-15 18:50:43 | INFO     | __main__             | _dry_run             | Recipe: {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Fine-tune, Feature-based approach performs best with MASK strategy for MLM pre-training and R ND strategy when using feature-based approach to NER.",
+  "learning_rate": 0.15,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 18:51:42 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:51:42 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 18:51:42 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 18:51:42 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 18:51:42 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 18:51:42 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T18:51:42.107779
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 18:51:42 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_185142
+2025-11-15 18:51:42 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 18:51:42 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 18:51:42 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 18:51:42 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 18:51:42 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 18:51:42 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 18:51:42 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 18:51:42 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T13:21:42.779100"}
+2025-11-15 18:51:42 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 18:51:49 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 18:52:08 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 18:52:08 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "The document provided is a comprehensive analysis of the pre-training and fine-tuning processes for BERT (Bidirectional Encoder Representations from Transformers) on various NLP tasks using different masking strategies. The study includes experiments with MNLI, CoLA, SST-2, MRPC, WNLI, RTE, STS-B datasets and a feature-based approach for the task of named entity recognition (NER). It discusses how BERT's pre-training on masked language modeling can be adapted to NLP tasks with varying degrees of token prediction within batches. The document also explores whether extensive pre-training is necessary, comparing performance across different numbers of training steps and examining the impact of various MLM strategies (MASK SAME vs RND) during BERT's masked language modeling phase on downstream tasks like MNLI and NER.",
+  "dataset": "The document discusses several datasets used in experiments: Stanford Sentiment Treebank, Corpus of Linguistic Acceptability (CoLA), Winograd NLI dataset from Levesque et al., Semantic Textual Similarity Benchmark by Cer et al., and the Microsoft Research Paraphrase Corpus. It also mentions a small-scale text entailment task called Recognizing Textual Entailment.",
+  "optimizer": "> The document does not provide specific details on optimizers used during BERT's pre-training or fine-tuning stages, but it is implied that AdamW with weight decay and a learning rate of $1e-5$ was employed. It also mentions the use of dropout (0.1) for regularization.",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "loss_function": "[MASK]",
+  "gpu_required": true
+}
+2025-11-15 18:52:08 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 26.04420518875122, "paper_length": 64138}, "timestamp": "2025-11-15T13:22:08.158810"}
+2025-11-15 18:52:08 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 26.04s)
+2025-11-15 18:52:08 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 18:52:08 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 18:52:08 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 18:52:08 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 18:52:08 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 18:52:08 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 19:02:33 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:02:33 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 19:02:33 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 19:02:33 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 19:02:33 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 19:02:33 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T19:02:33.865630
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:02:33 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_190233
+2025-11-15 19:02:33 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 19:02:33 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 19:02:33 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 19:02:33 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 19:02:33 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 19:02:33 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 19:02:34 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 19:02:34 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T13:32:34.501075"}
+2025-11-15 19:02:34 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 19:02:44 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 19:02:50 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-15 19:02:50 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 19:02:50 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 0.15,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 19:02:50 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 17.045556783676147, "paper_length": 64138}, "timestamp": "2025-11-15T13:32:50.917766"}
+2025-11-15 19:02:50 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 17.05s)
+2025-11-15 19:02:50 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 19:02:50 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 19:02:50 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 19:02:50 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 19:02:50 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 19:02:50 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 19:29:11 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:29:11 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 19:29:11 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 19:29:11 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 19:29:11 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 19:29:11 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:29:11 | INFO     | cache                | clear                | Cache cleared
+2025-11-15 19:29:23 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:29:23 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 19:29:23 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 19:29:23 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 19:29:23 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 19:29:23 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T19:29:23.676023
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:29:23 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_192923
+2025-11-15 19:29:23 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 19:29:23 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 19:29:23 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 19:29:23 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 19:29:23 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 19:29:23 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 19:29:24 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 19:29:24 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T13:59:24.265154"}
+2025-11-15 19:29:24 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 19:29:35 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 19:29:41 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-15 19:29:41 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 19:29:41 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 0.15,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 19:29:41 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 17.70474600791931, "paper_length": 64138}, "timestamp": "2025-11-15T13:59:41.390244"}
+2025-11-15 19:29:41 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 17.71s)
+2025-11-15 19:29:41 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 19:29:41 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 19:29:41 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 19:29:41 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 19:29:41 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 19:29:41 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 19:46:59 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:46:59 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 19:46:59 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 19:46:59 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 19:46:59 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 19:46:59 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T19:46:59.969940
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 19:46:59 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_194659
+2025-11-15 19:46:59 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 19:46:59 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 19:46:59 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 19:46:59 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 19:46:59 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 19:46:59 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 19:47:01 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 19:47:01 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T14:17:01.001921"}
+2025-11-15 19:47:01 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 19:47:14 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 19:47:22 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-15 19:47:22 | WARNING  | schema               | validate_learning_rate | Invalid learning_rate '0.15' from LLM, defaulting to 0.001
+2025-11-15 19:47:22 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 19:47:22 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 5e-05,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 19:47:22 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 22.69501042366028, "paper_length": 64138}, "timestamp": "2025-11-15T14:17:22.683913"}
+2025-11-15 19:47:22 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 22.70s)
+2025-11-15 19:47:22 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 19:47:22 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 19:47:22 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 19:47:22 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 19:47:22 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 19:47:22 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 20:12:08 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 20:12:08 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 20:12:08 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 20:12:08 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 20:12:08 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 20:12:08 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T20:12:08.861776
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:12:08 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_201208
+2025-11-15 20:12:08 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 20:12:08 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 20:12:08 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 20:12:08 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 20:12:08 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 20:12:08 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 20:12:10 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 20:12:10 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T14:42:10.238782"}
+2025-11-15 20:12:10 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 20:12:24 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 20:12:34 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-15 20:12:34 | WARNING  | schema               | validate_learning_rate | Learning rate 0.15 too high (likely for BERT), capping at 5e-5
+2025-11-15 20:12:34 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 20:12:34 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 5e-05,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 20:12:34 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 25.426565408706665, "paper_length": 64138}, "timestamp": "2025-11-15T14:42:34.310660"}
+2025-11-15 20:12:34 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 25.43s)
+2025-11-15 20:12:34 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 20:12:34 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 20:12:34 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 20:12:34 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 20:12:34 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 20:12:34 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 20:20:53 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 20:20:53 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 20:20:53 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 20:20:53 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 20:20:53 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 20:20:53 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T20:20:53.945148
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:20:53 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_202053
+2025-11-15 20:20:53 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 20:20:53 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 20:20:53 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 20:20:53 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 20:20:53 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 20:20:53 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 20:20:55 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 20:20:55 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T14:50:55.136712"}
+2025-11-15 20:20:55 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 20:21:06 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 20:21:17 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'MLM pre-training with MASK SAME RND strategy, achi...', defaulting to Adam
+2025-11-15 20:21:18 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 20:21:18 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 3e-05,
+  "batch_size": 256,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 20:21:18 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 24.043931484222412, "paper_length": 64138}, "timestamp": "2025-11-15T14:51:18.004496"}
+2025-11-15 20:21:18 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 24.05s)
+2025-11-15 20:21:18 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 20:21:18 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 20:21:18 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 20:21:18 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 20:21:18 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 20:21:18 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-15 20:30:26 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 20:30:26 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-15 20:30:26 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-15 20:30:26 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-15 20:30:26 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-15 20:30:26 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | Timestamp: 2025-11-15T20:30:26.574023
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | ================================================================================
+2025-11-15 20:30:26 | INFO     | monitoring           | start_run            | Started tracking run: run_20251115_203026
+2025-11-15 20:30:26 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-15 20:30:26 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 20:30:26 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-15 20:30:26 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-15 20:30:26 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-15 20:30:26 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-15 20:30:27 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-15 20:30:27 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-15T15:00:27.245432"}
+2025-11-15 20:30:27 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-15 20:30:38 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-15 20:30:44 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-15 20:30:44 | WARNING  | schema               | validate_learning_rate | Learning rate 0.15 too high (likely for BERT), capping at 5e-5
+2025-11-15 20:30:44 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-15 20:30:44 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 5e-05,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-15 20:30:44 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 17.571427583694458, "paper_length": 64138}, "timestamp": "2025-11-15T15:00:44.153414"}
+2025-11-15 20:30:44 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 17.57s)
+2025-11-15 20:30:44 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-15 20:30:44 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 20:30:44 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-15 20:30:44 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-15 20:30:44 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-15 20:30:44 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-16 12:33:31 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-16 12:33:31 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-16 12:33:31 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-16 12:33:31 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-16 12:33:31 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-16 12:33:31 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | ================================================================================
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | ================================================================================
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | Timestamp: 2025-11-16T12:33:31.296056
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | ================================================================================
+2025-11-16 12:33:31 | INFO     | monitoring           | start_run            | Started tracking run: run_20251116_123331
+2025-11-16 12:33:31 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-16 12:33:31 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-16 12:33:31 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-16 12:33:31 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-16 12:33:31 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-16 12:33:31 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-16 12:33:37 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-16 12:33:37 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-16T07:03:37.708070"}
+2025-11-16 12:33:37 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-16 12:34:00 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-16 12:34:09 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-16 12:34:09 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "MLM (80% MASK, 10% SAME, 10% R ND)",
+  "learning_rate": 3e-05,
+  "batch_size": 64,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-16 12:34:09 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 38.44420146942139, "paper_length": 64138}, "timestamp": "2025-11-16T07:04:09.831440"}
+2025-11-16 12:34:09 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 38.45s)
+2025-11-16 12:34:09 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-16 12:34:09 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-16 12:34:09 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-16 12:34:09 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-16 12:34:09 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-16 12:34:09 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-16 13:16:50 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-16 13:16:50 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-16 13:16:50 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-16 13:16:50 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-16 13:16:50 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-16 13:16:50 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | ================================================================================
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | ================================================================================
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | Timestamp: 2025-11-16T13:16:50.495968
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | ================================================================================
+2025-11-16 13:16:50 | INFO     | monitoring           | start_run            | Started tracking run: run_20251116_131650
+2025-11-16 13:16:50 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-16 13:16:50 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-16 13:16:50 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-16 13:16:50 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-16 13:16:50 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-16 13:16:50 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-16 13:16:56 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-16 13:16:56 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-16T07:46:56.366941"}
+2025-11-16 13:16:56 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-16 13:17:16 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-16 13:17:22 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-16 13:17:22 | WARNING  | schema               | validate_learning_rate | Learning rate 0.15 too high (likely for BERT), capping at 5e-5
+2025-11-16 13:17:22 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-16 13:17:22 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 5e-05,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-16 13:17:22 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 31.961771488189697, "paper_length": 64138}, "timestamp": "2025-11-16T07:47:22.508575"}
+2025-11-16 13:17:22 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 31.97s)
+2025-11-16 13:17:22 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-16 13:17:22 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-16 13:17:22 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-16 13:17:22 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-16 13:17:22 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-16 13:17:22 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-18 17:59:28 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-18 17:59:28 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-18 17:59:28 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-18 17:59:28 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-18 17:59:28 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-18 17:59:28 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | ================================================================================
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | ================================================================================
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | Timestamp: 2025-11-18T17:59:28.568424
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | ================================================================================
+2025-11-18 17:59:28 | INFO     | monitoring           | start_run            | Started tracking run: run_20251118_175928
+2025-11-18 17:59:28 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-18 17:59:28 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-18 17:59:28 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-18 17:59:28 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-18 17:59:28 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-18 17:59:28 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-18 17:59:30 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-18 17:59:30 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-18T12:29:30.334317"}
+2025-11-18 17:59:30 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-18 17:59:46 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-18 17:59:52 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-18 17:59:52 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-18 17:59:52 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 0.15,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-18 17:59:52 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 24.13539743423462, "paper_length": 64138}, "timestamp": "2025-11-18T12:29:52.710235"}
+2025-11-18 17:59:52 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 24.14s)
+2025-11-18 17:59:52 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-18 17:59:52 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-18 17:59:52 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-18 17:59:52 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-18 17:59:52 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-18 17:59:52 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-18 18:51:18 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-18 18:51:18 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-18 18:51:18 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-18 18:51:18 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-18 18:51:18 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-18 18:51:18 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | ================================================================================
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | ================================================================================
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | Paper: tests\papers\1810.04805v2.pdf
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | Timestamp: 2025-11-18T18:51:18.227865
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | ================================================================================
+2025-11-18 18:51:18 | INFO     | monitoring           | start_run            | Started tracking run: run_20251118_185118
+2025-11-18 18:51:18 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-18 18:51:18 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-18 18:51:18 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-18 18:51:18 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-18 18:51:18 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-18 18:51:18 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1810.04805v2.pdf
+2025-11-18 18:51:19 | INFO     | nodes                | researcher_node      | Paper loaded: 64138 characters
+2025-11-18 18:51:19 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 64138, "tags": {}, "timestamp": "2025-11-18T13:21:19.768337"}
+2025-11-18 18:51:19 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-18 18:51:31 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-18 18:51:37 | WARNING  | schema               | validate_optimizer   | Invalid optimizer description: 'Fine-tune, Feature-based approach performs best wi...', defaulting to Adam
+2025-11-18 18:51:37 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-18 18:51:37 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "BERT",
+  "dataset": "MNLI Dev Accuracy",
+  "optimizer": "Adam",
+  "learning_rate": 0.15,
+  "batch_size": 32,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-18 18:51:37 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1810.04805v2.pdf", "duration": 19.499409675598145, "paper_length": 64138}, "timestamp": "2025-11-18T13:21:37.729817"}
+2025-11-18 18:51:37 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 19.50s)
+2025-11-18 18:51:37 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-18 18:51:37 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-18 18:51:37 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-18 18:51:37 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-18 18:51:37 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-18 18:51:37 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-20 11:56:10 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-20 11:56:10 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-20 11:56:10 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-20 11:56:10 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-20 11:56:10 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-20 11:56:10 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | ================================================================================
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | ================================================================================
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | Paper: tests\papers\1-s2.0-S016926072300593X-main.pdf
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | Timestamp: 2025-11-20T11:56:10.092202
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | ================================================================================
+2025-11-20 11:56:10 | INFO     | monitoring           | start_run            | Started tracking run: run_20251120_115610
+2025-11-20 11:56:10 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-20 11:56:10 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-20 11:56:10 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-20 11:56:10 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-20 11:56:10 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-20 11:56:10 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1-s2.0-S016926072300593X-main.pdf
+2025-11-20 11:56:16 | INFO     | nodes                | researcher_node      | Paper loaded: 57617 characters
+2025-11-20 11:56:16 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 57617, "tags": {}, "timestamp": "2025-11-20T06:26:16.826803"}
+2025-11-20 11:56:16 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-20 11:56:33 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-20 11:56:39 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-20 11:56:39 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "SpiNN",
+  "dataset": "Emotion Meter Database (EmoMeter)",
+  "optimizer": "Surrogate Gradient Learning",
+  "learning_rate": 0.01,
+  "batch_size": 32,
+  "loss_function": "Spike Shift Loss",
+  "gpu_required": true
+}
+2025-11-20 11:56:39 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1-s2.0-S016926072300593X-main.pdf", "duration": 29.023533821105957, "paper_length": 57617}, "timestamp": "2025-11-20T06:26:39.167133"}
+2025-11-20 11:56:39 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 29.03s)
+2025-11-20 11:56:39 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-20 11:56:39 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-20 11:56:39 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-20 11:56:39 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-20 11:56:39 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-20 11:56:39 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...
+2025-11-20 11:59:37 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-20 11:59:37 | INFO     | logging_config       | setup_logging        | Logging system initialized
+2025-11-20 11:59:37 | INFO     | logging_config       | setup_logging        | Log file: C:\paper2code\logs\paper2code.log
+2025-11-20 11:59:37 | INFO     | logging_config       | setup_logging        | Error log: C:\paper2code\logs\errors.log
+2025-11-20 11:59:37 | INFO     | logging_config       | setup_logging        | Metrics log: C:\paper2code\logs\metrics.log
+2025-11-20 11:59:37 | INFO     | logging_config       | setup_logging        | ================================================================================
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | ================================================================================
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | PAPER2CODE - PRODUCTION RUN
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | ================================================================================
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | Paper: tests\papers\1-s2.0-S016926072300593X-main.pdf
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | Timestamp: 2025-11-20T11:59:37.618386
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | Config: phi3 @ 0.0
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | ================================================================================
+2025-11-20 11:59:37 | INFO     | monitoring           | start_run            | Started tracking run: run_20251120_115937
+2025-11-20 11:59:37 | INFO     | __main__             | run                  | Starting pipeline execution...
+2025-11-20 11:59:37 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-20 11:59:37 | INFO     | nodes                | researcher_node      | RESEARCHER NODE
+2025-11-20 11:59:37 | INFO     | nodes                | researcher_node      | ================================================================================
+2025-11-20 11:59:37 | INFO     | nodes                | __enter__            | Starting: researcher
+2025-11-20 11:59:37 | INFO     | nodes                | researcher_node      | Loading paper: tests\papers\1-s2.0-S016926072300593X-main.pdf
+2025-11-20 11:59:39 | INFO     | nodes                | researcher_node      | Paper loaded: 57617 characters
+2025-11-20 11:59:39 | INFO     | metrics              | log_metric           | {"metric": "paper_length", "value": 57617, "tags": {}, "timestamp": "2025-11-20T06:29:39.266206"}
+2025-11-20 11:59:39 | INFO     | nodes                | researcher_node      | Extracting experiment recipe...
+2025-11-20 11:59:48 | INFO     | httpx                | _send_single_request | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-20 11:59:53 | INFO     | nodes                | researcher_node      | Recipe extracted successfully
+2025-11-20 11:59:53 | INFO     | nodes                | researcher_node      | {
+  "model_architecture": "SpiNNEr",
+  "dataset": "EmotionDataset-EEG",
+  "optimizer": "Adam",
+  "learning_rate": 0.005,
+  "batch_size": 64,
+  "loss_function": "CrossEntropyLoss",
+  "gpu_required": true
+}
+2025-11-20 11:59:53 | INFO     | metrics              | log_event            | {"event": "researcher_success", "data": {"paper_path": "tests\\papers\\1-s2.0-S016926072300593X-main.pdf", "duration": 15.651978015899658, "paper_length": 57617}, "timestamp": "2025-11-20T06:29:53.273834"}
+2025-11-20 11:59:53 | INFO     | nodes                | __exit__             | Completed: researcher (duration: 15.65s)
+2025-11-20 11:59:53 | INFO     | graph                | decide_after_researcher | Router: Researcher OK. Proceeding to MLflow setup.
+2025-11-20 11:59:53 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-20 11:59:53 | INFO     | nodes                | setup_tracking_node  | MLFLOW SETUP NODE
+2025-11-20 11:59:53 | INFO     | nodes                | setup_tracking_node  | ================================================================================
+2025-11-20 11:59:53 | INFO     | nodes                | __enter__            | Starting: mlflow_setup
+2025-11-20 11:59:53 | INFO     | nodes                | setup_tracking_node  | Initializing MLflow tracking...

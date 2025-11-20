@@ -1,0 +1,23 @@
+{
+  "run_id": "run_20251120_115610",
+  "paper_path": "tests\\papers\\1-s2.0-S016926072300593X-main.pdf",
+  "start_time": 1763619970.096765,
+  "end_time": 1763620062.2272956,
+  "status": "failed",
+  "researcher_duration": 29.023533821105957,
+  "coder_duration": 19.791544675827026,
+  "qa_duration": 0.00485539436340332,
+  "total_duration": 92.13053059577942,
+  "retries": 2,
+  "failed_stages": [
+    "coder",
+    "coder"
+  ],
+  "code_length": 8162,
+  "code_valid": true,
+  "llm_calls": 4,
+  "llm_tokens": 14569,
+  "llm_cost": 0.0,
+  "error_type": "Exception",
+  "error_message": "Docker execution failed"
+}

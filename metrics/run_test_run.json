@@ -1,0 +1,20 @@
+{
+  "run_id": "test_run",
+  "paper_path": "test_paper.txt",
+  "start_time": 1763191672.435311,
+  "end_time": 1763191672.4356415,
+  "status": "success",
+  "researcher_duration": 10.5,
+  "coder_duration": 0.0,
+  "qa_duration": 0.0,
+  "total_duration": 0.0003304481506347656,
+  "retries": 0,
+  "failed_stages": [],
+  "code_length": 0,
+  "code_valid": false,
+  "llm_calls": 1,
+  "llm_tokens": 1000,
+  "llm_cost": 0.01,
+  "error_type": null,
+  "error_message": null
+}

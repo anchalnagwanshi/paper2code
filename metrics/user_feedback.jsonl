@@ -1,0 +1,9 @@
+{"run_id": "run_20251115_182137", "timestamp": "2025-11-15T18:23:25.567496", "success": true}
+{"run_id": "run_20251115_185142", "timestamp": "2025-11-15T18:53:46.717547", "success": false, "quality_rating": 1}
+{"run_id": "run_20251115_190233", "timestamp": "2025-11-15T19:06:05.411853", "success": false}
+{"run_id": "run_20251115_201208", "timestamp": "2025-11-15T20:17:22.775136", "success": false}
+{"run_id": "run_20251115_202053", "timestamp": "2025-11-15T20:24:56.470698", "success": true, "quality_rating": 2, "accuracy_rating": 1}
+{"run_id": "run_20251116_123331", "timestamp": "2025-11-16T12:35:43.420133", "success": false}
+{"run_id": "run_20251116_131650", "timestamp": "2025-11-16T13:33:30.024248", "success": true, "quality_rating": 4, "accuracy_rating": 3, "comments": "1"}
+{"run_id": "run_20251120_115610", "timestamp": "2025-11-20T11:57:42.230543", "success": false}
+{"run_id": "run_20251120_115937", "timestamp": "2025-11-20T12:05:00.243123", "success": true, "quality_rating": 1, "accuracy_rating": 1, "comments": "1", "would_use_again": false}

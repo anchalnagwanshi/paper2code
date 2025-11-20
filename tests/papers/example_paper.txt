@@ -1,0 +1,22 @@
+Title: Image Classification with ResNet on CIFAR-10
+
+Abstract:
+We implement image classification using ResNet-50 architecture on the CIFAR-10 dataset.
+
+Methodology:
+We use a ResNet-50 convolutional neural network for image classification.
+The model is trained on the CIFAR-10 dataset which contains 60,000 32x32 color images
+in 10 classes.
+
+Training Configuration:
+- Model: ResNet-50
+- Dataset: CIFAR-10 (from torchvision)
+- Optimizer: Adam
+- Learning rate: 0.001
+- Batch size: 32
+- Epochs: 10
+- Loss function: Cross-Entropy Loss
+- GPU: Not required for this small experiment
+
+Evaluation:
+We evaluate the model on the test set using accuracy and F1-score metrics.
