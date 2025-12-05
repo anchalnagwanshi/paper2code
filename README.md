@@ -1,4 +1,4 @@
-# Paper2Code - Production Edition
+# Paper2Code
 
 Convert research papers to executable code with comprehensive monitoring, error handling, and quality assurance.
 
